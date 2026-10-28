@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hexscope"
+version = "1.0.0"
+description = "Zero-dependency binary forensics workbench: hex dump, magic detection, entropy, strings, histogram, binary diff and file carving."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "HexScope contributors" }]
+keywords = [
+    "hexdump",
+    "binary",
+    "forensics",
+    "entropy",
+    "magic",
+    "carving",
+    "reverse-engineering",
+    "cli",
+    "security",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[project.scripts]
+hexscope = "hexscope.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/hexscope"
+Repository = "https://github.com/gitstq/hexscope"
+Issues = "https://github.com/gitstq/hexscope/issues"
+
+[tool.setuptools]
+packages = ["hexscope"]
+
+[tool.setuptools.package-data]
+hexscope = ["py.typed"]
